@@ -69,7 +69,8 @@ const defaultProps = {
 
   // internationalization props
   displayFormat: () => moment.localeData().longDateFormat('L'),
-  monthFormat: 'MMMM YYYY',
+  monthFormat: 'MMMM',
+  yearFormat: 'YYYY',
   phrases: {
     closeDatePicker: 'Close',
     clearDate: 'Clear Date',
@@ -286,6 +287,7 @@ export default class SingleDatePicker extends React.Component {
       numberOfMonths,
       orientation,
       monthFormat,
+      yearFormat,
       navPrev,
       navNext,
       onPrevMonthClick,
@@ -330,6 +332,7 @@ export default class SingleDatePicker extends React.Component {
           onPrevMonthClick={onPrevMonthClick}
           onNextMonthClick={onNextMonthClick}
           monthFormat={monthFormat}
+          yearFormat={yearFormat}
           withPortal={withPortal || withFullScreenPortal}
           hidden={!focused}
           initialVisibleMonth={initialVisibleMonthThunk}

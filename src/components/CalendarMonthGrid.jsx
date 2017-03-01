@@ -36,6 +36,7 @@ const propTypes = forbidExtraProps({
 
   // i18n
   monthFormat: PropTypes.string,
+  yearFormat: PropTypes.string,
 });
 
 const defaultProps = {
@@ -54,7 +55,8 @@ const defaultProps = {
   transformValue: 'none',
 
   // i18n
-  monthFormat: 'MMMM YYYY', // english locale
+  monthFormat: 'MMMM', // english locale
+  yearFormat: 'YYYY',
 };
 
 function getMonths(initialMonth, numberOfMonths) {
@@ -145,6 +147,7 @@ export default class CalendarMonthGrid extends React.Component {
       modifiers,
       numberOfMonths,
       monthFormat,
+      yearFormat,
       orientation,
       transformValue,
       onDayMouseEnter,
@@ -182,6 +185,7 @@ export default class CalendarMonthGrid extends React.Component {
               enableOutsideDays={enableOutsideDays}
               modifiers={modifiers}
               monthFormat={monthFormat}
+              yearFormat={yearFormat}
               orientation={orientation}
               onDayMouseEnter={onDayMouseEnter}
               onDayMouseLeave={onDayMouseLeave}

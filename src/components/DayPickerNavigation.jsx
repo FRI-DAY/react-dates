@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 import { forbidExtraProps } from 'airbnb-prop-types';
 import cx from 'classnames';
 
-import LeftArrow from '../svg/arrow-left.svg';
-import RightArrow from '../svg/arrow-right.svg';
+import LeftArrow from '../svg/icon-arrow-left.svg';
+import RightArrow from '../svg/icon-arrow-right.svg';
 import ChevronUp from '../svg/chevron-up.svg';
 import ChevronDown from '../svg/chevron-down.svg';
 import ScrollableOrientationShape from '../shapes/ScrollableOrientationShape';

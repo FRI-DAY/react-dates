@@ -13,7 +13,7 @@
   }
 
   table {
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
     caption: {
       caption-side: initial;
@@ -38,17 +38,28 @@
 .CalendarMonth__caption {
   color: $react-dates-color-gray-dark;
   margin-top: 7px;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 21px;
   text-align: center;
   // necessary to not hide borders in FF
   margin-bottom: 2px;
   caption-side: initial;
+
+  .CalendarMonth__caption--month {
+    margin-right: 4px;
+  }
+
+  .CalendarMonth__caption--year {
+    font-weight: 300;
+    color: $react-dates-color-gray-lighter;
+  }
 }
 
 .CalendarMonth--horizontal .CalendarMonth__caption,
 .CalendarMonth--vertical .CalendarMonth__caption {
-  padding: 15px 0 35px;
+  padding: 15px 0 50px;
 }
+
 
 .CalendarMonth--vertical-scrollable .CalendarMonth__caption {
   padding: 5px 0;

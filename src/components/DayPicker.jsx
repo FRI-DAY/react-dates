@@ -50,6 +50,7 @@ const propTypes = forbidExtraProps({
 
   // internationalization
   monthFormat: PropTypes.string,
+  yearFormat: PropTypes.string,
 });
 
 const defaultProps = {
@@ -76,7 +77,8 @@ const defaultProps = {
   onDayMouseLeave() {},
 
   // internationalization
-  monthFormat: 'MMMM YYYY',
+  monthFormat: 'MMMM',
+  yearFormat: 'YYYY',
 };
 
 function applyTransformStyles(el, transform, opacity = '') {
@@ -347,7 +349,7 @@ export default class DayPicker extends React.Component {
     for (let i = 0; i < 7; i += 1) {
       header.push(
         <li key={i}>
-          <small>{moment().weekday(i).format('dd')}</small>
+          {moment().weekday(i).format('dd')}
         </li>,
       );
     }
@@ -384,6 +386,7 @@ export default class DayPicker extends React.Component {
       renderDay,
       onOutsideClick,
       monthFormat,
+      yearFormat,
     } = this.props;
 
     const numOfWeekHeaders = this.isVertical() ? 1 : numberOfMonths;
@@ -466,6 +469,7 @@ export default class DayPicker extends React.Component {
               renderDay={renderDay}
               onMonthTransitionEnd={this.updateStateAfterMonthTransition}
               monthFormat={monthFormat}
+              yearFormat={yearFormat}
             />
             {verticalScrollable && this.renderNavigation()}
           </div>

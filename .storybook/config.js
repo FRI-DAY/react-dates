@@ -4,20 +4,11 @@ import infoAddon from '@kadira/react-storybook-addon-info';
 import '../css/styles.scss';
 
 addDecorator((story) => {
-  moment.locale('en');
+  moment.locale('de');
   return (story());
 });
 
 function loadStories() {
-  require('../stories/DateRangePicker');
-  require('../stories/DateRangePicker_input');
-  require('../stories/DateRangePicker_calendar');
-  require('../stories/DateRangePicker_day');
-  require('../stories/SingleDatePicker');
-  require('../stories/SingleDatePicker_input');
-  require('../stories/SingleDatePicker_calendar');
-  require('../stories/SingleDatePicker_day');
-  require('../stories/DayPickerRangeController');
   require('../stories/DayPicker');
 }
 

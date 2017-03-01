@@ -3,22 +3,17 @@
 .DayPickerNavigation__prev,
 .DayPickerNavigation__next {
   cursor: pointer;
-  line-height: 0.78;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
-  user-select: none;
 }
 
 .DayPickerNavigation__prev--default,
 .DayPickerNavigation__next--default {
-  border: 1px solid $react-dates-color-border-light;
+  border: none;
   background-color: $react-dates-color-white;
   color: $react-dates-color-placeholder-text;
 
   &:focus,
   &:hover {
-    border: 1px solid $react-dates-color-border-medium;
+    border: none;
   }
 
   &:active {
@@ -32,7 +27,7 @@
   .DayPickerNavigation__prev,
   .DayPickerNavigation__next {
     border-radius: 3px;
-    padding: 6px 9px;
+    // padding: 6px 9px;
     top: 18px;
     z-index: 2;
     position: absolute;
@@ -49,8 +44,9 @@
   .DayPickerNavigation__prev--default,
   .DayPickerNavigation__next--default {
     svg {
-      height: 19px;
-      width: 19px;
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
       fill: $react-dates-color-gray-light;
     }
   }

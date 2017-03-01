@@ -2,17 +2,22 @@
 
 // This order is important.
 .CalendarDay {
-  border: 1px solid lighten($react-dates-color-border-light, 3);
   padding: 0;
-  box-sizing: border-box;
+  border-radius: 25px;
   color: $react-dates-color-gray;
   cursor: pointer;
+  font-size: 14px;
   width: 39px;
   height: 38px;
 
   &:active {
     background: darken($react-dates-color-white, 5%);
   }
+}
+
+.CalendarDay--today {
+  border: 2px solid $react-dates-color-gray-lighter;
+  border-radius: 25px;
 }
 
 .CalendarDay--highlighted-calendar {
@@ -78,7 +83,8 @@
 .CalendarDay--selected-end,
 .CalendarDay--selected {
   background: $react-dates-color-primary;
-  border: 1px double $react-dates-color-primary;
+  border: 2px solid $react-dates-color-primary;
+  border-radius: 25px;
   color: $react-dates-color-white;
 
   &:active {
@@ -99,7 +105,6 @@
 .CalendarDay--blocked-out-of-range {
   color: $react-dates-color-gray-lighter;
   background: $react-dates-color-white;
-  border: 1px solid lighten($react-dates-color-border-light, 3);
   cursor: default;
 
   &:active {

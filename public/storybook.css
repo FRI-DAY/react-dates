@@ -6,8 +6,8 @@ body {
 
 html {
   box-sizing: border-box;
-  font-family: Helvetica, "sans-serif";
-  font-size: 14px;
+  font-family: 'San Francisco', Helvetica, 'Helvetica Neue', sans-serif;
+  font-size: 10px;
 }
 
 *, *:before, *:after {

@@ -32,6 +32,7 @@ const propTypes = forbidExtraProps({
 
   // i18n
   monthFormat: PropTypes.string,
+  yearFormat: PropTypes.string,
 });
 
 const defaultProps = {
@@ -46,7 +47,8 @@ const defaultProps = {
   renderDay: null,
 
   // i18n
-  monthFormat: 'MMMM YYYY', // english locale
+  monthFormat: 'MMMM', // english locale
+  yearFormat: 'YYYY',
 };
 
 export default class CalendarMonth extends React.Component {
@@ -74,6 +76,7 @@ export default class CalendarMonth extends React.Component {
     const {
       month,
       monthFormat,
+      yearFormat,
       orientation,
       isVisible,
       modifiers,
@@ -85,6 +88,7 @@ export default class CalendarMonth extends React.Component {
 
     const { weeks } = this.state;
     const monthTitle = month.format(monthFormat);
+    const yearTitle = month.format(yearFormat);
 
     const calendarMonthClasses = cx('CalendarMonth', {
       'CalendarMonth--horizontal': orientation === HORIZONTAL_ORIENTATION,
@@ -96,7 +100,8 @@ export default class CalendarMonth extends React.Component {
       <div className={calendarMonthClasses} data-visible={isVisible}>
         <table>
           <caption className="CalendarMonth__caption js-CalendarMonth__caption">
-            <strong>{monthTitle}</strong>
+            <span className="CalendarMonth__caption--month">{monthTitle}</span>
+            <span className="CalendarMonth__caption--year">{yearTitle}</span>
           </caption>
 
           <tbody className="js-CalendarMonth__grid">
