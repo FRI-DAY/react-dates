@@ -8,3 +8,14 @@
 @import 'DateRangePickerInput';
 @import 'SingleDatePicker';
 @import 'SingleDatePickerInput';
+
+/** 
+  Fixes FRD-128 Clicking back twice quickly in date picker highlights days
+  Solution: https://github.com/airbnb/react-dates/issues/69
+  */
+.DayPicker__week-header, .CalendarMonth__caption {
+  user-select: none;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
